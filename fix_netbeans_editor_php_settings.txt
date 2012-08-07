@@ -1,0 +1,8 @@
+Netbeans PHP Autocomplete works by displaying all
+functions/methods regardless of the static reference of :: vs the instance
+reference of ->
+#
+Tools > Options > Editor > Code Completion > PHP
+#
+It should be possible to adjust code completion there.
+
