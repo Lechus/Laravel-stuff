@@ -1,0 +1,31 @@
+//Add this to application.routes.php
+//Thx /credits go to : Averal and HiroKws  from forums.laravel.com
+//http://forums.laravel.com/viewtopic.php?id=742
+
+Route::get('ccc', function() 
+{
+	$aliases = Config::get('application.aliases');
+	$new_line = '<br>';
+	echo '&lt;?php'.$new_line.$new_line;
+	foreach ($aliases as $alias => $name_space)
+	{
+		echo 'class '.$alias.' extends '.$name_space.'{};'.$new_line;
+		echo 'class_alias(\''.$alias.'\', \''.$name_space.'\');'.$new_line.$new_line;
+	}
+});
+
+Route::get('ccc2file', function() 
+{
+	$aliases = Config::get('application.aliases');
+	$code_line[] = '<?php';
+	$code_line[] = '';
+	foreach ($aliases as $alias => $name_space)
+	{
+		$code_line[] = 'class '.$alias.' extends '.$name_space.'{};';
+		$code_line[] = 'class_alias(\''.$alias.'\', \''.$name_space.'\');';
+	}
+	$out_path = path('app').'ccc.php';
+	File::put($out_path, implode(PHP_EOL, $code_line));
+	echo "Laravel Code Complition Code on $out_path";
+});
+
