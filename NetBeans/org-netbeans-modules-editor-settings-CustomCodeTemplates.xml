@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE codetemplates PUBLIC "-//NetBeans//DTD Editor Code Templates settings 1.0//EN" "http://www.netbeans.org/dtds/EditorCodeTemplates-1_0.dtd">
+<codetemplates>
+    <codetemplate abbreviation="formcheckbox" xml:space="preserve">
+        <code><![CDATA[   <div class="control-group">
+        {{ Form::label( '', '${2:human_name}', array( "class" => "control-label" )) }}
+        <div class="controls">
+            <label class="checkbox">
+                {{ Form::checkbox( '${1:field_name}[]', '', FormData::set_checkbox( '${1:field_name}', '')) }}
+                Option 1
+            </label>
+            <label class="checkbox">
+                {{ Form::checkbox( '${1:field_name}[]', '', FormData::set_checkbox( '${1:field_name}', '')) }}
+                Option 2
+            </label>
+            <label class="checkbox">
+                {{ Form::checkbox( '${1:field_name}[]', '', FormData::set_checkbox( '${1:field_name}', '')) }}
+                Option 3
+            </label>
+            <label class="checkbox">
+                {{ Form::checkbox( '${1:field_name}[]', '', FormData::set_checkbox( '${1:field_name}', '')) }}
+                Option 4
+            </label>
+        </div>
+    </div>]]></code>
+        <description><![CDATA[Laravel TwiterBootstrap Forms CheckBox]]></description>
+    </codetemplate>
+        <codetemplate abbreviation="formdate" xml:space="preserve">
+        <code><![CDATA[   <div class="control-group">
+          {{ Form::label( '${1:field name}', '${2:real name}', array('class' => 'control-label')) }}
+          <div class="controls">
+          {{ Form::date( '${1:field name}', Input::old('${1:field name}'), array( 'class' => 'input-mini')) }}
+          </div>
+          </div>]]></code>
+        <description><![CDATA[Laravel TwiterBootstrap Forms Date]]></description>
+    </codetemplate>
+        <codetemplate abbreviation="formradio" xml:space="preserve">
+        <code><![CDATA[
+
+    <div class="control-group">
+        {{ Form::label( '', '${2:human_name}', array( 'class' => 'control-label')) }}
+        <div class="controls">
+            <label class="radio">
+                {{ Form::radio( '${1:field_name}', '${3:yes}', Input::old( '${1:field_name}') == '${3:yes}') }}
+                Yes
+            </label>
+            <label class="radio">
+                {{ Form::radio( '${1:field_name}', '${4:no}', Input::old( '${1:field_name}') == '${4:no}') }}
+                No
+            </label>
+        </div>
+    </div>
+
+]]></code>
+        <description><![CDATA[Laravel TwiterBootstrap Forms Radio]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="formselect" xml:space="preserve">
+        <code><![CDATA[
+
+    <div class="control-group">
+     {{ Form::label( '${1:field_name}', '${2:human_name}', array( 'class' => 'control-label' ) ) }}
+        <div class="controls">
+            {{ Form::select( '${1:field_name}', ${3:options}, Input::old( '${1:field_name}' )) }}
+        </div>
+    </div>
+
+]]></code>
+        <description><![CDATA[Laravel TwiterBootstrap Forms Select]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="formsubmit" xml:space="preserve">
+        <code>><![CDATA[
+{{ Form::submit( 'Save', array( 'class' => 'btn btn-success' ) ) }}
+]]></code>
+        <description><![CDATA[Laravel TwiterBootstrap Forms Submit]]></description>
+    </codetemplate>
+    <codetemplate abbreviation="formtext" xml:space="preserve">
+        <code>><![CDATA[
+
+        <div class="control-group">
+        {{ Form::label( '${1:field name}', '${2:real name}', array( 'class' => 'control-label')) }}
+        <div class="controls">
+        {{ Form::text( '${1:field name}', Input::old( '${1:field name}')) }}
+        </div>
+        </div>
+
+        ]]></code>
+        <description><![CDATA[Laravel TwiterBootstrap Forms Text]]></description>
+    </codetemplate>
+</codetemplates>

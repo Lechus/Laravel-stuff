@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE editor-macros PUBLIC "-//NetBeans//DTD Editor Macros settings 1.1//EN" "http://www.netbeans.org/dtds/EditorMacros-1_1.dtd">
+<editor-macros>
+    <macro name="Pogrub" xml:space="preserve">
+        <shortcut keystrokes="SD-B"/>
+        <code><![CDATA[cut-to-clipboard "<strong>" paste-from-clipboard "</strong>"]]></code>
+    </macro>
+    <macro name="CSS3 Prefix" xml:space="preserve">
+        <shortcut keystrokes="SD-P"/>
+        <code><![CDATA[caret-end-line selection-begin-line copy-to-clipboard caret-backward insert-break caret-up "-webkit-" paste-from-clipboard insert-break "-moz-" paste-from-clipboard
+ insert-break "-o-" paste-from-clipboard  insert-break "-ms-" paste-from-clipboard]]></code>
+    </macro>
+    <macro name="TwardaSpacja" xml:space="preserve">
+        <shortcut keystrokes="SD-SPACE"/>
+        <code><![CDATA["&nbsp;"]]></code>
+    </macro>
+</editor-macros>
